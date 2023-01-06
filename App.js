@@ -1,4 +1,3 @@
-import { StyleSheet } from 'react-native';
 import StartGameScreen from './screens/StartGameScreen';
 
 export default function App() {
@@ -6,7 +5,3 @@ export default function App() {
     <StartGameScreen />
   );
 }
-
-const styles = StyleSheet.create({
-
-});
