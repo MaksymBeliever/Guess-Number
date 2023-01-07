@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, Alert } from 'react-native';
+import { View, StyleSheet, FlatList, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import InstructionText from '../components/ui/InstructionText';
@@ -61,7 +61,7 @@ function GameScreen({ userNumber, onGameOver }) {
 
     useEffect(() => {
         if (currentGuess === userNumber) {
-            onGameOver();
+            onGameOver(guessRounds.length);
         }
     }, [currentGuess, userNumber, onGameOver]);
 
@@ -90,7 +90,7 @@ function GameScreen({ userNumber, onGameOver }) {
                     </View>
                 </View>
             </Card>
-            <View>
+            <View style={styles.listContainer}>
                 {/*{guessRounds.map(guessRound => <Text key={guessRound}>{guessRound}</Text>)}*/}
                 <FlatList
                     data={guessRounds}
@@ -123,4 +123,8 @@ const styles = StyleSheet.create({
     buttonContainer: {
         flex: 1,
     },
+    listContainer: {
+        flex: 1,
+        padding: 16
+    }
 });
