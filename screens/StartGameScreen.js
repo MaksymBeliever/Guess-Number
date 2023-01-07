@@ -7,7 +7,7 @@ import Title from '../components/ui/Title';
 import Card from '../components/ui/Card';
 import Colors from '../constants/colors';
 
-function StartGameScreen({onPickNumber}) {
+function StartGameScreen({ onPickNumber }) {
     const [enteredNumber, setEnteredNumber] = useState('');
 
     function numberInputHandler(enteredText) {
@@ -29,7 +29,6 @@ function StartGameScreen({onPickNumber}) {
             );
             return;
         }
-
         onPickNumber(chosenNumber);
     }
 

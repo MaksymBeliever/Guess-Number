@@ -15,7 +15,6 @@ function generateRandomBetween(min, max, exclude) {
     if (rndNum === exclude) {
         return generateRandomBetween(min, max, exclude);
     }
-
     return rndNum;
 }
 
@@ -91,7 +90,6 @@ function GameScreen({ userNumber, onGameOver }) {
                 </View>
             </Card>
             <View style={styles.listContainer}>
-                {/*{guessRounds.map(guessRound => <Text key={guessRound}>{guessRound}</Text>)}*/}
                 <FlatList
                     data={guessRounds}
                     renderItem={(itemData) => (
