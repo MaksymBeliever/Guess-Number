@@ -4,6 +4,8 @@ function Title({ children }) {
     return <Text style={styles.title}>{children}</Text>;
 }
 
+export default Title;
+
 const styles = StyleSheet.create({
     title: {
         fontFamily: 'open-sans-bold',
@@ -12,8 +14,8 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         borderWidth: 2,
         borderColor: 'white',
-        padding: 12
+        padding: 12,
+        maxWidth: '80%',
+        width: 300
     }
 });
-
-export default Title;
